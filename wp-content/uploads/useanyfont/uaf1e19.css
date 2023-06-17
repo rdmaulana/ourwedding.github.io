@@ -1,0 +1,10 @@
+				@font-face {
+					font-family: 'shelleyandantebt';
+					src: url('4727ShelleyAndanteBT.woff2') format('woff2'),
+						url('4727ShelleyAndanteBT.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.shelleyandantebt{font-family: 'shelleyandantebt' !important;}
+
+		
