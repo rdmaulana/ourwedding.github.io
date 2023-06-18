@@ -6624,7 +6624,7 @@
 											</div>
 
 											<div class="wdp-dear">Kpd Bpk/Ibu/Saudara/i</div>
-											<div class="wdp-name namatamu"></div>
+											<div class="wdp-name namatamu" id="namatamu"></div>
 											<div class="wdp-text">Tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda
 												Untuk Hadir Di Acara Pernikahan Kami.</div>
 											<div class="wdp-button-wrapper" id="wdp-button-wrapper">
@@ -6634,6 +6634,23 @@
 										</div>
 									</div>
 								</div>
+
+								<script>
+									// Mendapatkan nilai parameter dari URL
+									function getParameterByName(name) {
+										name = name.replace(/[\[\]]/g, '\\$&');
+										var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+											results = regex.exec(window.location.href);
+										if (!results) return null;
+										if (!results[2]) return '';
+										return decodeURIComponent(results[2].replace(/\+/g, ' '));
+									}
+								
+									// Mendapatkan nilai parameter "?to" dan mencetaknya ke dalam elemen HTML
+									var toParam = getParameterByName('to');
+									var guestNameElement = document.getElementById('namatamu');
+									guestNameElement.textContent = toParam;
+								</script>
 
 								<script>
 									const sampul = jQuery('.modalx').data('sampul');
